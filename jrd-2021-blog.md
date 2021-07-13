@@ -1,8 +1,15 @@
 <h1 id="dos-and-donts-of-html-email-development-in-2021">Dos (and Don’ts) of HTML email development in 2021</h1>
+<h2 id="notes-from-meeting-with-hillary">Notes from meeting with Hillary</h2>
+<ul>
+<li>end of month posting</li>
+<li>end of week hillary can clean up and add what I need to</li>
+<li>post update in July 2021 Blog post task</li>
+</ul>
 <p>(In no particular order)<br>
 When coding emails in 2021, here are some tips and tricks that you can keep in your toolbox so your clients don’t have sketchy looking emails in Microsoft Outlook.</p>
 <h2 id="dont-code-everything-from-scratch-every-time">Don’t code everything from scratch, every time</h2>
 <p>There are tools (link to last tip) that can help speed up your workflow.</p>
+<p>(below needs to be written, not in bullets)</p>
 <ul>
 <li>Buttons, background images (and patterns)</li>
 <li>Use design templates in your UI tool (Sketch, Figma, XD)
@@ -11,8 +18,10 @@ When coding emails in 2021, here are some tips and tricks that you can keep in y
 </ul>
 </li>
 </ul>
-<h2 id="do-use-google-fonts">Do use Google Fonts</h2>
+<h2 id="do-use-google-fonts">Do use Google Fonts*</h2>
 <p>Let me explain… Outlook doesn’t render Google fonts (since you’ll need to call them in the <code>head</code> and Outlook strips that tag), but that doesn’t mean you should only use Arial and Times in every email. You can use Google fonts in your email designs, as long as their line height, letter spacing, and font size rendering will be friendly when Outlook defaults to Arial and Times. Always use <a href="https://www.cssfontstack.com/">font stacks</a> and make sure your Google Font calls don’t have quotes, as Outlook becomes finicky and can ignore the whole <code>font-family</code> rule if one of them has quotes.</p>
+<p>(expand on this)</p>
+<p>*disclaimer goes here</p>
 <h2 id="dont-be-afraid-to-nest-your-tables.-seriously.">Don’t be afraid to nest your tables. Seriously.</h2>
 <p>Nested tables makes spacing your elements vertically trivial, and will cause fewer bugs in Outlook’s appalling rendering system. Add your <code>background-color</code> to your <code>&lt;table&gt;</code>, and your <code>padding-top</code> and <code>padding-bottom</code> to your <code>td</code>:</p>
 <pre><code>&lt;body bgcolor="#fff" style="display: block; Margin: 0; padding: 0;"&gt;
@@ -49,9 +58,11 @@ When coding emails in 2021, here are some tips and tricks that you can keep in y
 </code></pre>
 <p>At this point in your code, your vertical spacing should already have been taken care of. In the <code>td</code> that holds your content, make sure that it’s <code>width</code> is taking up the exact space that the <code>td</code> elements aren’t. Now you’re free to now add your <code>img</code> and text elements as you wish!</p>
 <h2 id="do-pay-attention-to-your-width-on-img">Do pay attention to your width on <code>img</code></h2>
-<p>Notice how I added a <code>width</code> attribute to the <code>img</code>? Outlook will otherwise expand the image to it’s 100% width, even if your <code>td</code> has a fixed width. Also, add <code>display: block; Margin: 0; padding: 0;</code> to each <code>img</code> to make sure it doesn’t have access spacing that the browser or rendering system adds by default.</p>
+<p>Notice how I added a <code>width</code> attribute to the <code>img</code>? Outlook will otherwise expand the image to it’s 100% width, even if your <code>td</code> has a fixed width. Also, add <code>display: block; Margin: 0; padding: 0;</code> to each <code>img</code> to make sure it doesn’t have access spacing that the browser or rendering system adds by default.<br>
+(add snippet here)</p>
 <h3 id="what-about-retina-images">What about retina images?</h3>
-<p>You can export your images as 2x from your UI software, and still use them in your email code. As long as your <code>width</code> attribute is accurate, everything will still stay in it’s place.</p>
+<p>You can export your images as 2x from your UI software, and still use them in your email code. As long as your <code>width</code> attribute is accurate, everything will still stay in it’s place.<br>
+(add screenshots from Sketch, Figma, and XD)</p>
 <h2 id="dont-ignore-the-email-service">Don’t ignore the email service</h2>
 <p>Coding emails can give you tunnel vision, but some email service providers have different methods to help your workflow. Also, I can’t forget to mention the astronomical list of <a href="https://www.campaignmonitor.com/css/">unsupported CSS rules</a> that makes coding emails feel like we should be worried about Y2K again.</p>
 <h3 id="what-do-the-jackrabbit-developers-recommend">What do the Jackrabbit Developers recommend?</h3>
@@ -64,6 +75,7 @@ When coding emails in 2021, here are some tips and tricks that you can keep in y
 <p>Mailchimp has <a href="https://mailchimp.com/help/create-editable-content-areas-with-mailchimps-template-language/">custom attributes</a> that makes coding emails a bit more time consuming, but ultimately creates an amazing template experience for the client. Many comparison articles online fail to mention this feature, unfortunately. While not as much of a customer relationship management (CRM) tool as Salesforce’s Pardot, Mailchimp can cater to both B2B and B2C organizations and still scales well with a growing customer base, and has a <em><strong>much</strong></em> smaller monthly cost!</p>
 <h3 id="what-about-constant-contact">What about Constant Contact?</h3>
 <p>While Constant Contact has been a mainstay in the email marketing space for many years, it hasn’t grown in complexity in the ways of other platforms. It’s a great visual email builder for the marketers who aren’t HTML savvy, but without the ability to even change plain text in a visual editor, many clients need additional help with their campaigns more often then when they use a platform like Mailchimp or Pardot.</p>
+<p>(Hillary adds something about closing out this section talking about why we aren’t discussing every platform)</p>
 <h2 id="do-use-tools-and-resources-to-help-development-workflow-probably-the-last-tip">Do use tools and resources to help development workflow (probably the last tip)</h2>
 <p>Here are some helpful links to help save time and energy while you’re coding and listening to <a href="https://www.youtube.com/watch?v=5qap5aO4i9A">lofi hip hop beats</a> to study and relax to:<br>
 Code Tools</p>
